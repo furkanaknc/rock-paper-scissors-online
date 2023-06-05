@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background-color:#211d2a ;
+  color: #72b9ad;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+img{
+  width: 150px;
+}
+
+.start-screen {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.start-screen h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #72b9ad;
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+
+.gameplay-choices button {
+  width: 300px;
+  padding: 5px 25px;
+  background-color: #e8b46d;
+  color:#a15699;
+  outline: none;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.start-screen button:hover {
+  background: #a15699;
+  cursor: pointer;
+  color:#e8b46d; ;
+}
+
+.create-room-box {
+  display: none;
+}
+
+.join-with-id,
+.create-room-box {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.join-with-id input,
+.create-room-box input {
+  width: 80%;
+  height: 35px;
+  border: 1px solid #333;
+  outline: none;
+  padding: 5px;
+  margin: 0;
+}
+
+.join-with-id button,
+.create-room-box button {
+  width: 20%;
+  margin: 0;
+  height: 35px;
+  background: #e8b46d;
+  color: #a15699;
+  outline: none;
+  border: none;
+}
+
+.join-with-id .cancel-action,
+.create-room-box .cancel-action {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: #e8b46d;
+  color: #a15699;
+}
+
+.cancel-action:hover {
+  background: #a15699 !important;
+  color: #e8b46d;;
+}
+
+
+
+.gameplay-screen {
+  width: 600px;
+  display: none;
+}
+
+.wait-message {
+  width: 600px;
+  padding-top: 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.wait-message p {
+  text-align: center;
+}
+
+.connected-players {
+  width: 500px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.connected-players .player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connected-players .player .dot {
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.connected-players .player .connected {
+  background: green;
+}
+
+.connected-players .player:first-child {
+  margin-right: 30px;
+}
+
+.choices {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .7s ease-in;
+}
+
+.choices button{
+  background-color: #e8b46d;
+}
+
+.choice button:focus{
+  background-color: #a15699;
+}
+.choice:focus{
+  background-color: #a15699;
+}
+
+.choices{
+  gap: 30px;
+}
+.choice:hover {
+  background-color: #a15699;
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.score {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score>span {
+  font-weight: bold;
+  background: #a15699;
+  color: #e8b46d;
+  padding: 10px;
+}
+
+.score span#score {
+  font-weight: normal;
+}
+
+.score>span:first-child {
+  margin-bottom: 20px;
+}
+
+.score-board{
+  width: 100px;
+}
+
+.message-after-choice-selection {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.message-after-choice-selection p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.join-room-box {
+  display: none;
+}
+
+.join-room-box .join-random {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  height: 35px;
+  background: #e8b46d;
+  color: #a15699;
+  outline: none;
+  border: none;
+  margin-top: 30px;
+}
+
+.error-message {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: none;
+  background: rgb(209, 61, 61);
+  color: white;
+  padding: 20px;
+}
+
+.error-message p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.my-choice {
+  color: green;
+}
+
+.enemy-choice {
+  color: red;
+}
+
+.footer{
+  width: auto;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-name p {
+  margin-top: 10%;
+}
+
+.footer-socials i{
+  margin-top: 100%;
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    width:75px;
+  }
+
+  .start-screen{
+    width: 300px;
+    font-size: 20px;
+  }
+
+  .gameplay-choices{
+    width: 150px;
+  }
+
+  .create-room-box{
+    font-size: 10px;
+  }
+  #cancel-create-action{
+    font-size: 15px;
+  }
+
+ .join-room-box{
+  display: none;
+  font-size: 15px;
+ }
+
+ .gameplay-screen{
+  width: 300px;
+  justify-content: start;
+  align-items: start;
+ }
+ .game-btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: auto;
+ }
+
+ .wait-message{
+  width: 300px;
+  font-size: 15px;
+ }
+ .connected-players{
+  width: 300px;
+  font-size: 12px;
+ }
+
+ .message-after-choice-selection{
+  width: 300px;
+ }
+
+
+  .footer{
+    width: 300px;
+  }
+
+
+}
